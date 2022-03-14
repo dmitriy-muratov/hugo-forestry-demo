@@ -1,0 +1,20 @@
+{{ if .Site.Data.features.enable }}
+{{ "<!-- OFFERS Section Start -->" | safeHTML }}
+<section class="offers">
+  <div class="offers__wrapper container">
+    {{ range .Site.Data.features.item }}
+      <div class="offers__offer">
+        <h4 class="title offers__title">
+          <span class="text">
+            {{ .title }}
+          </span>
+        </h4>
+        <p class="offers__desc">
+          {{ .description }}
+        </p>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ "<!-- OFFERS Section End -->" | safeHTML }}
+{{ end }}
